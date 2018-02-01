@@ -37,26 +37,26 @@
         android:layout_width="wrap_content"
         android:textColor="@color/textColor"
         android:layout_height="wrap_content"
-        android:text="Edit minimum price"/>
+        android:text="Edit price"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:hint="Minimum price"
-        android:id="@+id/edit_min_price"
+        android:id="@+id/edit_price"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/textColor"
-        android:text="Edit maximum price"/>
+        android:text="Edit rent period"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="Maximum price"
-        android:id="@+id/edit_max_price"/>
+        android:hint="Minimum period"
+        android:id="@+id/edit_period"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -16,8 +16,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_1 = "ID";
     private static final String COL_2 = "CITY";
     private static final String COL_3 = "NUM_ROOMS";
-    private static final String COL_4= "MIN_PRICE";
-    private static final String COL_5 = "MAX_PRICE";
+    private static final String COL_4= "PRICE";
+    private static final String COL_5 = "MIN_PERIOD";
     private static final String COL_6 = "FLOOR";
     private static final String CREATE_QUERY = "create table " + TABLE_NAME + " (" +
             COL_1 + " INTEGER PRIMARY KEY AUTOINCREMENT, " +

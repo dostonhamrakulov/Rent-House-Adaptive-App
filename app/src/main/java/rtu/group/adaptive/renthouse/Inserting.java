@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class Inserting extends AppCompatActivity {
 
-    EditText number_rooms, price_min, floors, price_max;
+    EditText number_rooms, price, floors, period;
     Spinner cities;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class Inserting extends AppCompatActivity {
         setContentView(R.layout.activity_inserting);
 
         number_rooms = (EditText)findViewById(R.id.edit_rooms);
-        price_min = (EditText)findViewById(R.id.edit_max_price);
-        price_max = (EditText)findViewById(R.id.edit_min_price);
+        price = (EditText)findViewById(R.id.edit_price);
+        period = (EditText)findViewById(R.id.edit_period);
 
         cities = (Spinner) findViewById(R.id.edit_city);
         floors = (EditText)findViewById(R.id.edit_floor);
@@ -32,14 +32,14 @@ public class Inserting extends AppCompatActivity {
 
         BackgroundTask backgroundTask= new BackgroundTask(this);
         backgroundTask.execute("add_info", cities.getSelectedItem().toString(), number_rooms.getText().toString(),
-                price_min.getText().toString(), price_max.getText().toString(), floors.getText().toString());
+                price.getText().toString(), period.getText().toString(), floors.getText().toString());
 
         Toast.makeText(Inserting.this, "New data inserted!", Toast.LENGTH_LONG).show();
 
         //cities.setText("");
         number_rooms.setText("");
-        price_min.setText("");
-        price_max.setText("");
+        price.setText("");
+        period.setText("");
         floors.setText("");
 
 

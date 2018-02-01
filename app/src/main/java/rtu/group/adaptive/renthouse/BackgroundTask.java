@@ -23,8 +23,8 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
     private static final String COL_1 = "ID";
     private static final String COL_2 = "CITY";
     private static final String COL_3 = "NUM_ROOMS";
-    private static final String COL_4= "MIN_PRICE";
-    private static final String COL_5 = "MAX_PRICE";
+    private static final String COL_4= "PRICE";
+    private static final String COL_5 = "MIN_PERIOD";
     private static final String COL_6 = "FLOOR";
 
     private int num_rooms, min_price, max_price, floor;
@@ -45,12 +45,12 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
         if (methos.equals("add_info")){
             String city = voids[1];
             String num_rooms = voids[2];
-            String min_price = voids[3];
-            String max_price = voids[4];
+            String price = voids[3];
+            String period = voids[4];
             String floor = voids[5];
 
             SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getWritableDatabase();
-            myDatabaseHelper.insertData(city, Integer.parseInt(num_rooms), Integer.parseInt(min_price), Integer.parseInt(max_price), Integer.parseInt(floor));
+            myDatabaseHelper.insertData(city, Integer.parseInt(num_rooms), Integer.parseInt(price), Integer.parseInt(period), Integer.parseInt(floor));
 
             return "One row is inserted ... ";
         }
