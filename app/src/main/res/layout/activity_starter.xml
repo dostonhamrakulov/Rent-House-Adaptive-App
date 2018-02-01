@@ -42,7 +42,7 @@
             android:background="@color/button"
             android:layout_marginLeft="40dp"
             android:text="View all house"
-
+            android:onClick="moveDisplaying"
             android:id="@+id/btn_moveSearch"
             android:textAllCaps="false"
             android:layout_marginTop="20dp"/>

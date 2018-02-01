@@ -15,4 +15,7 @@ public class Starter extends AppCompatActivity {
     public void moveInserting(View view){
         startActivity(new Intent(Starter.this, Inserting.class));
     }
+    public void moveDisplaying(View view){
+        startActivity(new Intent(Starter.this, Displaying.class));
+    }
 }
