@@ -28,6 +28,7 @@
             android:background="@color/button"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp"
+            android:onClick="moveInserting"
             android:text="Insert house"
 
             android:textAllCaps="false"

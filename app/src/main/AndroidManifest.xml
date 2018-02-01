@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Starter"></activity>
+        <activity android:name=".Starter" />
+        <activity android:name=".Inserting"></activity>
     </application>
 
 </manifest>
