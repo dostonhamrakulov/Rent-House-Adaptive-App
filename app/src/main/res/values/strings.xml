@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rent house</string>
+    <string name="welcome_message">Welcome to our rent house system</string>
 </resources>
