@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Starter" />
         <activity android:name=".Inserting" />
-        <activity android:name=".Displaying"></activity>
+        <activity android:name=".Displaying" />
+        <activity android:name=".SearchHouse"></activity>
     </application>
 
 </manifest>

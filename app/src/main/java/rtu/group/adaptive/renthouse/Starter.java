@@ -18,4 +18,7 @@ public class Starter extends AppCompatActivity {
     public void moveDisplaying(View view){
         startActivity(new Intent(Starter.this, Displaying.class));
     }
+    public void moveSearchHouse(View view){
+        startActivity(new Intent(Starter.this, SearchHouse.class));
+    }
 }

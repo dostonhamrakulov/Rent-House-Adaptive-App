@@ -55,7 +55,7 @@
             android:layout_marginLeft="40dp"
             android:text="Search house"
             android:textAllCaps="false"
-
+            android:onClick="moveSearchHouse"
             android:id="@+id/btn_search"
             android:layout_gravity="center"
             />
