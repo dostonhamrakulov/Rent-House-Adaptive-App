@@ -30,11 +30,11 @@ public class Houses {
         return num_rooms;
     }
 
-    public int getMin_price() {
+    public int getPrice() {
         return price;
     }
 
-    public int getMax_price() {
+    public int getPeriod() {
         return period;
     }
 

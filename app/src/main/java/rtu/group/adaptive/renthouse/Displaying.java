@@ -9,5 +9,8 @@ public class Displaying extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_displaying);
+
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+        backgroundTask.execute("get_info");
     }
 }
