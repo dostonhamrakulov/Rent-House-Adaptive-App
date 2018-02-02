@@ -13,13 +13,24 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    DefaultValues defaultValues;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        defaultValues = new DefaultValues();
     }
     public void Staring(View view){
+
         startActivity(new Intent(MainActivity.this, Starter.class));
+    }
+    public void DownloadData(View view){
+        for(int i = 0; i < 23; i++){
+            BackgroundTask backgroundTask= new BackgroundTask(this);
+            backgroundTask.execute("add_info", defaultValues.getCITY(i), defaultValues.getNUM_ROOMS(i),
+                    defaultValues.getPRICE(i), defaultValues.getMIN_PERIOD(i), defaultValues.getFLOOR(i));
+        }
+        Toast.makeText(MainActivity.this, "Database is updated", Toast.LENGTH_LONG).show();
     }
 
     @Override

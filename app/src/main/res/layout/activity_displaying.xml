@@ -13,7 +13,7 @@
         android:gravity="center"
         android:textStyle="bold"
         android:id="@+id/firstText"
-        android:text="The list of universities"/>
+        android:text="The list of houses"/>
 
     <ListView
         android:layout_width="match_parent"

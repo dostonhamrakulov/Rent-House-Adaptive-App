@@ -7,13 +7,25 @@
     tools:context="rtu.group.adaptive.renthouse.MainActivity">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:text="Let`s start"
         android:onClick="Staring"
         android:id="@+id/startering"
+        android:textAllCaps="false"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update database"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/startering"
+        android:layout_centerHorizontal="true"
+        android:onClick="DownloadData"
         android:textAllCaps="false"/>
     <ImageView
         android:id="@+id/imageView"
