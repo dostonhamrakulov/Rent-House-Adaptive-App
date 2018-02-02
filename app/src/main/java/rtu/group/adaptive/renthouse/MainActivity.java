@@ -27,10 +27,11 @@ public class MainActivity extends AppCompatActivity {
     public void DownloadData(View view){
         for(int i = 0; i < 23; i++){
             BackgroundTask backgroundTask= new BackgroundTask(this);
-//            backgroundTask.execute("add_info", defaultValues.getCITY(i), defaultValues.getNUM_ROOMS(i),
-//                    defaultValues.getPRICE(i), defaultValues.getMIN_PERIOD(i), defaultValues.getFLOOR(i));
+            backgroundTask.execute("add_info", defaultValues.getCITY(i), defaultValues.getNUM_ROOMS(i),
+                    defaultValues.getPRICE(i), defaultValues.getMIN_PERIOD(i), defaultValues.getFLOOR(i),
+                    defaultValues.getADDRESSES(i), defaultValues.getPHONES(i));
         }
-        Toast.makeText(MainActivity.this, "Database is updated", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Database is updated", Toast.LENGTH_SHORT).show();
     }
 
     @Override
