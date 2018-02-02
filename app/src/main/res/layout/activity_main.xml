@@ -13,6 +13,14 @@
         android:layout_centerHorizontal="true"
         android:text="Let`s start"
         android:onClick="Staring"
+        android:id="@+id/startering"
         android:textAllCaps="false"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startering"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/idoston" />
 
 </RelativeLayout>
