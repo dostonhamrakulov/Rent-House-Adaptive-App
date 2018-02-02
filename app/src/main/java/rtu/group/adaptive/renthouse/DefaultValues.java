@@ -19,7 +19,19 @@ public class DefaultValues {
             "12", "6", "12", "6", "12", "6", "12", "6"};
     public static final String[] FLOOR = {"1", "5", "6", "4", "2", "7", "5", "6", "4", "2", "9", "5", "6", "4", "2", "9", "5", "6", "4", "1", "3", "5", "6", "4", "2",
             "1", "5", "6", "5", "2", "8", "9", "8", "5", "12"};
-
+    public static final String[] ADDRESSES = {"Kalku 1/312", "Setas 1/208", "Davgavpils 2/529", "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",
+            "Kalku 1/312", "Setas 1/208", "Davgavpils 2/529",};
+    public static final String[] PHONESES = {"+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000",
+            "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000",
+            "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000",
+            "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000", "+371 28000000"};
 
     public DefaultValues() {
 
@@ -43,6 +55,12 @@ public class DefaultValues {
 
     public String getFLOOR(int i) {
         return FLOOR[i];
+    }
+    public String getADDRESSES(int i) {
+        return ADDRESSES[i];
+    }
+    public String getPHONES(int i) {
+        return PHONESES[i];
     }
 
 }

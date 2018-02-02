@@ -32,6 +32,8 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
     private static final String COL_4= "PRICE";
     private static final String COL_5 = "MIN_PERIOD";
     private static final String COL_6 = "FLOOR";
+    private static final String COL_7 = "ADDRESS";
+    private static final String COL_8 = "PHONE";
 
     BackgroundTask(Context ctx){
         this.context = ctx;
@@ -50,9 +52,11 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
             String price = voids[3];
             String period = voids[4];
             String floor = voids[5];
+            String address = voids[6];
+            String phone = voids[7];
 
             SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getWritableDatabase();
-            myDatabaseHelper.insertData(city, Integer.parseInt(num_rooms), Integer.parseInt(price), Integer.parseInt(period), Integer.parseInt(floor));
+            myDatabaseHelper.insertData(city, Integer.parseInt(num_rooms), Integer.parseInt(price), Integer.parseInt(period), Integer.parseInt(floor), address, phone);
 
             return "One row is inserted ... ";
         }
@@ -65,19 +69,20 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
             housesAdapter = new HousesAdapter(context, R.layout.list_houses);
             listView = (ListView) activity.findViewById(R.id.list_view);
 
-            String id_1, city_1;
-            int num_rooms_1, price_1, period_1, floor_1;
+            String id_1, city_1, addrees_1, phone_1;
+            int num_rooms_12, price_12, period_12, floor_12;
 
             while(cursor.moveToNext()){
                 id_1 = cursor.getString(cursor.getColumnIndex(COL_1));
                 city_1 = cursor.getString(cursor.getColumnIndex(COL_2));
-                num_rooms_1 = cursor.getInt(cursor.getColumnIndex(COL_3));
-                price_1 = cursor.getInt(cursor.getColumnIndex(COL_4));
-                period_1 = cursor.getInt(cursor.getColumnIndex(COL_5));
-                floor_1 = cursor.getInt(cursor.getColumnIndex(COL_6));
-
-                Houses university = new Houses(id_1, city_1, num_rooms_1, price_1, period_1, floor_1);
-                publishProgress(university);
+                num_rooms_12 = cursor.getInt(cursor.getColumnIndex(COL_3));
+                price_12 = cursor.getInt(cursor.getColumnIndex(COL_4));
+                period_12 = cursor.getInt(cursor.getColumnIndex(COL_5));
+                floor_12 = cursor.getInt(cursor.getColumnIndex(COL_6));
+                addrees_1 = cursor.getString(cursor.getColumnIndex(COL_7));
+                phone_1 = cursor.getString(cursor.getColumnIndex(COL_8));
+                Houses houses = new Houses(id_1, city_1, num_rooms_12, price_12, period_12, floor_12, addrees_1, phone_1);
+                publishProgress(houses);
 
             }
 
@@ -90,7 +95,7 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
             housesAdapter = new HousesAdapter(context, R.layout.activity_adaptive_display);
             listView_2 = (ListView) activity.findViewById(R.id.list_view_2);
 
-            String id_2, city_2;
+            String id_2, city_2, addrees_2, phone_2;
             int num_rooms_2, price_2, period_2, floor_2;
 
             while(cursor.moveToNext()){
@@ -100,9 +105,10 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
                 price_2 = cursor.getInt(cursor.getColumnIndex(COL_4));
                 period_2 = cursor.getInt(cursor.getColumnIndex(COL_5));
                 floor_2 = cursor.getInt(cursor.getColumnIndex(COL_6));
-
-                Houses university = new Houses(id_2, city_2, num_rooms_2, price_2, period_2, floor_2);
-                publishProgress(university);
+                addrees_2 = cursor.getString(cursor.getColumnIndex(COL_7));
+                phone_2 = cursor.getString(cursor.getColumnIndex(COL_8));
+                Houses houses = new Houses(id_2, city_2, num_rooms_2, price_2, period_2, floor_2, addrees_2, phone_2);
+                publishProgress(houses);
 
             }
 

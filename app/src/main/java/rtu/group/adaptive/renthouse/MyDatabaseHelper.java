@@ -19,13 +19,17 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_4= "PRICE";
     private static final String COL_5 = "MIN_PERIOD";
     private static final String COL_6 = "FLOOR";
+    private static final String COL_7 = "ADDRESS";
+    private static final String COL_8 = "PHONE";
     private static final String CREATE_QUERY = "create table " + TABLE_NAME + " (" +
             COL_1 + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             COL_2 + " TEXT, " +
             COL_3 + " INTEGER, " +
             COL_4 + " INTEGER, " +
             COL_5 + " INTEGER, " +
-            COL_6 + " INTEGER);";
+            COL_6 + " INTEGER, " +
+            COL_7 + " TEXT, " +
+            COL_8 + " TEXT);";
 
     public MyDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -44,7 +48,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-    public void insertData(String city, int num_rooms, int min_price, int max_price, int floor){
+    public void insertData(String city, int num_rooms, int min_price, int max_price, int floor, String address, String phone){
 
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -54,12 +58,14 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_4, min_price);
         contentValues.put(COL_5, max_price);
         contentValues.put(COL_6, floor);
+        contentValues.put(COL_7, address);
+        contentValues.put(COL_8, phone);
         db.insert(TABLE_NAME, null, contentValues);
 
     }
     public Cursor getInformation(SQLiteDatabase sqLiteDatabase){
 
-        String[] projections = {COL_1, COL_2, COL_3, COL_4, COL_5, COL_6};
+        String[] projections = {COL_1, COL_2, COL_3, COL_4, COL_5, COL_6, COL_7, COL_8};
         Cursor cursor =  sqLiteDatabase.query(TABLE_NAME, projections, null, null, null, null, null);
 
         return cursor;

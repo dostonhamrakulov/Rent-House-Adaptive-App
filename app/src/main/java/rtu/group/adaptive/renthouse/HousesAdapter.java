@@ -61,6 +61,8 @@ public class HousesAdapter extends ArrayAdapter {
             houseHolder.price = view.findViewById(R.id.textView4);
             houseHolder.period = view.findViewById(R.id.textView5);
             houseHolder.floor = view.findViewById(R.id.textView6);
+            houseHolder.address = view.findViewById(R.id.textView7);
+            houseHolder.phone = view.findViewById(R.id.textView8);
 
 
             view.setTag(houseHolder);
@@ -77,7 +79,8 @@ public class HousesAdapter extends ArrayAdapter {
         houseHolder.price.setText("Price: " + houses.getPrice() + " euro");
         houseHolder.period.setText("Minimum price: " + houses.getPeriod() + " months");
         houseHolder.floor.setText("Floor: " + houses.getFloor());
-
+        houseHolder.address.setText("Adress: " + houses.getAddress());
+        houseHolder.phone.setText("Phone: " + houses.getPhone());
         houseHolder.empty.setText("---- House -----");
 
         return view;
@@ -85,6 +88,6 @@ public class HousesAdapter extends ArrayAdapter {
 
     static class HouseHolder
     {
-        TextView id, city, num_rooms, price, period, floor, empty;
+        TextView id, city, num_rooms, price, period, floor, empty, address, phone;
     }
 }

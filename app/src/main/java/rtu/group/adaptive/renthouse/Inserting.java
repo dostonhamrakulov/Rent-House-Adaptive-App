@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class Inserting extends AppCompatActivity {
 
-    EditText number_rooms, price, floors, period;
+    EditText number_rooms, price, floors, period, address, phone;
     Spinner cities;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,8 @@ public class Inserting extends AppCompatActivity {
         number_rooms = (EditText)findViewById(R.id.edit_rooms);
         price = (EditText)findViewById(R.id.edit_price);
         period = (EditText)findViewById(R.id.edit_period);
-
+        address = (EditText)findViewById(R.id.edit_address);
+        phone = (EditText)findViewById(R.id.edit_phone);
         cities = (Spinner) findViewById(R.id.edit_city);
         floors = (EditText)findViewById(R.id.edit_floor);
 
@@ -37,7 +38,8 @@ public class Inserting extends AppCompatActivity {
 
         BackgroundTask backgroundTask= new BackgroundTask(this);
         backgroundTask.execute("add_info", cities.getSelectedItem().toString(), number_rooms.getText().toString(),
-                price.getText().toString(), period.getText().toString(), floors.getText().toString());
+                price.getText().toString(), period.getText().toString(), floors.getText().toString(),
+                address.getText().toString(), phone.getText().toString());
 
         Toast.makeText(Inserting.this, "New data inserted!", Toast.LENGTH_LONG).show();
 
