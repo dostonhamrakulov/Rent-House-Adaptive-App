@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please, enter the cretirias!"
+        android:text="Please, enter some cretirias!"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:textStyle="bold"
@@ -105,31 +105,4 @@
         android:textAllCaps="false"
         android:text="Start" />
 
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/instruction"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        android:layout_margin="10dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="Highest starts from 1, 2, 3, ..."/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="Lowest starts from 600, 599, 598, ..."/>
 </LinearLayout>

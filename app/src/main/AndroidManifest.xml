@@ -9,18 +9,60 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Starter" />
-        <activity android:name=".Inserting" />
-        <activity android:name=".Displaying" />
-        <activity android:name=".SearchHouse" />
-        <activity android:name=".AdaptiveDisplay"></activity>
+        <activity android:name=".Starter"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="rtu.group.adaptive.renthouse.Starter" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Inserting"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="rtu.group.adaptive.renthouse.Inserting" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Displaying"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="rtu.group.adaptive.renthouse.Displaying" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchHouse"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="rtu.group.adaptive.renthouse.SearchHouse" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AdaptiveDisplay"
+            android:label="@string/app_name"
+            android:parentActivityName=".SearchHouse">
+            <intent-filter>
+                <action android:name="rtu.group.adaptive.renthouse.AdaptiveDisplay" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
