@@ -21,16 +21,17 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
     ListView listView, listView_2;
     Activity activity;
 
+    private int num_rooms_1;
+    private int min_price_1;
+    private int max_price_1;
+    private String city_1;
+
     private static final String COL_1 = "ID";
     private static final String COL_2 = "CITY";
     private static final String COL_3 = "NUM_ROOMS";
     private static final String COL_4= "PRICE";
     private static final String COL_5 = "MIN_PERIOD";
     private static final String COL_6 = "FLOOR";
-
-    private int num_rooms, min_price, max_price, floor;
-    private String city;
-
 
     BackgroundTask(Context ctx){
         this.context = ctx;
@@ -81,33 +82,31 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
             }
 
             return "get_info";
-//        } else if (methos.equals("get_adaptive")){
-//            SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getReadableDatabase();
-//
-//            Cursor cursor = myDatabaseHelper.getAdaptiveData(sqLiteDatabase, minimum_rank, maximum_rank, continent);
-//
-//            universityAdapter = new UniversityAdapter(context, R.layout.activity_adaptive_display);
-//            listView_2 = (ListView) activity.findViewById(R.id.list_view_2);
-//
-//            String id, name, fee, program, city, country, continent;
-//            int rank;
-//            while(cursor.moveToNext()){
-//                id = cursor.getString(cursor.getColumnIndex(COL_1));
-//                name = cursor.getString(cursor.getColumnIndex(COL_2));
-//                //rank = cursor.getString(cursor.getColumnIndex(COL_3));
-//                rank = cursor.getInt(cursor.getColumnIndex(COL_3));
-//                fee = cursor.getString(cursor.getColumnIndex(COL_4));
-//                program = cursor.getString(cursor.getColumnIndex(COL_5));
-//                city = cursor.getString(cursor.getColumnIndex(COL_6));
-//                country = cursor.getString(cursor.getColumnIndex(COL_7));
-//                continent = cursor.getString(cursor.getColumnIndex(COL_8));
-//
-//                University university = new University(id, name, rank, fee, program, city, country, continent);
-//                publishProgress(university);
-//
-//            }
-//
-//            return "get_adaptive";
+        } else if (methos.equals("get_adaptive")){
+            SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getReadableDatabase();
+
+            Cursor cursor = myDatabaseHelper.getAdaptiveData(sqLiteDatabase, num_rooms_1, min_price_1, max_price_1, city_1);
+
+            housesAdapter = new HousesAdapter(context, R.layout.activity_adaptive_display);
+            listView_2 = (ListView) activity.findViewById(R.id.list_view_2);
+
+            String id_2, city_2;
+            int num_rooms_2, price_2, period_2, floor_2;
+
+            while(cursor.moveToNext()){
+                id_2 = cursor.getString(cursor.getColumnIndex(COL_1));
+                city_2 = cursor.getString(cursor.getColumnIndex(COL_2));
+                num_rooms_2 = cursor.getInt(cursor.getColumnIndex(COL_3));
+                price_2 = cursor.getInt(cursor.getColumnIndex(COL_4));
+                period_2 = cursor.getInt(cursor.getColumnIndex(COL_5));
+                floor_2 = cursor.getInt(cursor.getColumnIndex(COL_6));
+
+                Houses university = new Houses(id_2, city_2, num_rooms_2, price_2, period_2, floor_2);
+                publishProgress(university);
+
+            }
+
+            return "get_adaptive";
         }
         return null;
     }
@@ -116,9 +115,8 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
     protected void onPostExecute(String result) {
         if (result.equals("get_info")){
             listView.setAdapter(housesAdapter);
-//        }
-//        else if (result.equals("get_adaptive")){
-//            listView_2.setAdapter(universityAdapter);
+        } else if (result.equals("get_adaptive")){
+            listView_2.setAdapter(housesAdapter);
         } else {
             Toast.makeText(context, result, Toast.LENGTH_LONG).show();
         }
@@ -131,9 +129,10 @@ public class BackgroundTask extends AsyncTask<String, Houses, String> {
         housesAdapter.add(values[0]);
         super.onProgressUpdate(values);
     }
-//    public void setAdaptiveParameters(int min, int max, String continent){
-//        this.minimum_rank = min;
-//        this.maximum_rank = max;
-//        this.continent = continent;
-//    }
+    public void setAdaptiveParameters(int num_rooms_1, int min_price_1, int max_price_1, String city_1){
+        this.num_rooms_1 = num_rooms_1;
+        this.min_price_1 = min_price_1;
+        this.max_price_1 = max_price_1;
+        this.city_1 = city_1;
+    }
 }

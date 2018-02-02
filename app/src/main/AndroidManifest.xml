@@ -19,7 +19,8 @@
         <activity android:name=".Starter" />
         <activity android:name=".Inserting" />
         <activity android:name=".Displaying" />
-        <activity android:name=".SearchHouse"></activity>
+        <activity android:name=".SearchHouse" />
+        <activity android:name=".AdaptiveDisplay"></activity>
     </application>
 
 </manifest>

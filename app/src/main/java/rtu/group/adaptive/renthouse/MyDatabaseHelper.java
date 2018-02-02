@@ -65,11 +65,11 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor getAdaptiveData(SQLiteDatabase sqLiteDatabase, int min_price, int max_price, String city){
+    public Cursor getAdaptiveData(SQLiteDatabase sqLiteDatabase, int num_rooms, int min_price, int max_price, String city){
 
         Cursor res = sqLiteDatabase.rawQuery(" select * from " + TABLE_NAME +
-                " as U where (U.MAX_PRICE < " + max_price + " AND U.MIN_PRICE >  " + min_price +
-                " AND U.CITY = '" + city + "');", null);
+                " as U where (U.PRICE < " + max_price + " AND U.PRICE >  " + min_price +
+                " AND U.CITY = '" + city + "' AND U.NUM_ROOMS = " + num_rooms + ");", null);
 
         return res;
     }

@@ -87,7 +87,7 @@
         android:textSize="20dp"/>
 
     <Spinner
-        android:id="@+id/take_continent"
+        android:id="@+id/take_city"
         android:entries="@array/cities"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
