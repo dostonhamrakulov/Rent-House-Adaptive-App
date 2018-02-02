@@ -12,5 +12,7 @@ public class Displaying extends AppCompatActivity {
 
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute("get_info");
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 }

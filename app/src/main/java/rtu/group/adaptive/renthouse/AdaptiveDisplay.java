@@ -22,5 +22,7 @@ public class AdaptiveDisplay extends AppCompatActivity {
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.setAdaptiveParameters(Integer.parseInt(num_rooms), Integer.parseInt(min_price), Integer.parseInt(max_price), city);
         backgroundTask.execute("get_adaptive");
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 }

@@ -23,7 +23,7 @@ public class Inserting extends AppCompatActivity {
         cities = (Spinner) findViewById(R.id.edit_city);
         floors = (EditText)findViewById(R.id.edit_floor);
 
-
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
     public void AddData(View view){
 //        myDatabaseHelper.insertData(name1.getText().toString(), ranking1.getText().toString(),

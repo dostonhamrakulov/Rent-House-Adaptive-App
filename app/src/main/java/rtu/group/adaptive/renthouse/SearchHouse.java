@@ -42,5 +42,7 @@ public class SearchHouse extends AppCompatActivity {
                 }
         );
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
     }
 }

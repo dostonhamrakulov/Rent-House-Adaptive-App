@@ -11,6 +11,7 @@ public class Starter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starter);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
     public void moveInserting(View view){
         startActivity(new Intent(Starter.this, Inserting.class));
