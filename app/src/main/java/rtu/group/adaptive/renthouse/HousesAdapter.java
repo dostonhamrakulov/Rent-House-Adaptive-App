@@ -12,9 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Doston on 2/1/2018.
- */
+
 
 public class HousesAdapter extends ArrayAdapter {
 

@@ -8,9 +8,6 @@ import android.os.AsyncTask;
 import android.widget.ListView;
 import android.widget.Toast;
 
-/**
- * Created by Doston on 12/15/2017.
- */
 
 public class BackgroundTask extends AsyncTask<String, Houses, String> {
     Context context;

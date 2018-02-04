@@ -1,8 +1,5 @@
 package rtu.group.adaptive.renthouse;
 
-/**
- * Created by Doston on 12/16/2017.
- */
 
 public class DefaultValues {
 
