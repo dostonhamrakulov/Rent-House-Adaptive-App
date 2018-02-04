@@ -79,10 +79,10 @@ public class Inserting extends AppCompatActivity {
         }
         switch(id){
             case R.id.id_about_us:
-                Toast.makeText(Inserting.this, "I am Junior Android Developer!!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(Inserting.this, "We are a team from RTU", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_contact_us:
-                Toast.makeText(Inserting.this, "If you want to cantact me, please write email to doston2509@gmail.com!!!",
+                Toast.makeText(Inserting.this, "You can reach at us by mail programmer2509@gmail.com",
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_exit_app:

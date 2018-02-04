@@ -102,7 +102,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_insert"
         android:text="@string/btn_insert"
-        android:background="@color/button"
         android:onClick="AddData"/>
 
 </LinearLayout>

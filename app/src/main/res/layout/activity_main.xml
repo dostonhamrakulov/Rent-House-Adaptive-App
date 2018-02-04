@@ -33,6 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/startering"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/idoston" />
+        app:srcCompat="@drawable/Rent_logo" />
 
 </RelativeLayout>
