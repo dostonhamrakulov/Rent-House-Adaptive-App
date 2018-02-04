@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.activity_main_action, menu);
+        menuInflater.inflate(R.menu.menu_main, menu);
 
         //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Toast.makeText(MainActivity.this, "Sorry, there is no any option for setting!!!", Toast.LENGTH_LONG).show();
+        if (id == R.id.id_user_house) {
+            startActivity(new Intent(MainActivity.this, Inserting.class));
             return true;
         }
         switch(id){

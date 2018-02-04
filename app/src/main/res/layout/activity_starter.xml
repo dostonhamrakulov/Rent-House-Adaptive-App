@@ -21,18 +21,24 @@
             android:id="@+id/welcome"
             android:textSize="20dp"
             android:textStyle="italic"/>
-        <Button
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:onClick="moveInserting"
-            android:text="Insert house"
+            app:srcCompat="@drawable/rent_logo" />
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginRight="40dp"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:onClick="moveInserting"-->
+            <!--android:text="Insert house"-->
 
-            android:textAllCaps="false"
-            android:id="@+id/btn_moveInsert"
-            android:layout_marginTop="20dp"/>
+            <!--android:textAllCaps="false"-->
+            <!--android:id="@+id/btn_moveInsert"-->
+            <!--android:layout_marginTop="20dp"/>-->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
