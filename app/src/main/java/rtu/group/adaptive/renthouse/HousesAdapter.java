@@ -75,7 +75,7 @@ public class HousesAdapter extends ArrayAdapter {
         houseHolder.city.setText("City: " + houses.getCity());
         houseHolder.num_rooms.setText("Number of rooms: " + houses.getNum_rooms());
         houseHolder.price.setText("Price: " + houses.getPrice() + " euro");
-        houseHolder.period.setText("Minimum price: " + houses.getPeriod() + " months");
+        houseHolder.period.setText("Period price: " + houses.getPeriod() + " months");
         houseHolder.floor.setText("Floor: " + houses.getFloor());
         houseHolder.address.setText("Adress: " + houses.getAddress());
         houseHolder.phone.setText("Phone: " + houses.getPhone());
