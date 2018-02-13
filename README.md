@@ -28,19 +28,25 @@ We have developed the application for people who want to search new houses for r
 ### Screens:
 
 
-<p align="center"><img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_1.PNG" />
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_2.PNG" />
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_3.PNG" />
+<p align="center">
+	<img width="250px" height="350px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_1.jpg" />
+	<img width="250px" height="350px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_2.jpg" />
+	<img width="250px" height="350px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_3.jpg" />
 </p>
 <p align="center">
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_4.PNG" />
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_5.PNG" />
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_6.PNG" />
+	<img width="250px" height="350px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_4.jpg" />
+	<img width="250px" height="350px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_5.jpg" />
+	<img width="250px" height="350px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_6.jpg" />
 </p>
 <p align="center">
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_7.PNG" />
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_8.PNG" />
-	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/SQLiteDatabase-using-AsyncTask/blob/master/Images/images_9.PNG" />
+	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_7.jpg" />
+	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_8.jpg" />
+	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_9.jpg" />
+</p>
+<p align="center">
+	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_10.jpg" />
+	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_8.jpg" />
+	<img width="200px" height="300px" src="https://github.com/dostonhamrakulov/Rent-House-Adaptive-App/blob/master/images/images_9.jpg" />
 </p>
 
 ### Enjoy :)
