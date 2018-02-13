@@ -1,6 +1,8 @@
 package rtu.group.adaptive.renthouse;
 
-
+/*
+ *   Created by Doston Hamrakulov
+ */
 public class DefaultValues {
 
 

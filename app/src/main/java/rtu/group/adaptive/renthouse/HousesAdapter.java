@@ -12,8 +12,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
+/*
+ *   Created by Doston Hamrakulov
+ */
 public class HousesAdapter extends ArrayAdapter {
 
     List list = new ArrayList();

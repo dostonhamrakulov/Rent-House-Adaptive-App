@@ -9,6 +9,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
+/*
+ *   Created by Doston Hamrakulov
+ */
 public class BackgroundTask extends AsyncTask<String, Houses, String> {
     Context context;
     MyDatabaseHelper myDatabaseHelper;

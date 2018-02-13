@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+/*
+ *   Created by Doston Hamrakulov
+ */
 public class Inserting extends AppCompatActivity {
 
     EditText number_rooms, price, floors, period, address, phone;
@@ -79,10 +82,10 @@ public class Inserting extends AppCompatActivity {
         }
         switch(id){
             case R.id.id_about_us:
-                Toast.makeText(Inserting.this, "We are a team from RTU", Toast.LENGTH_LONG).show();
+                Toast.makeText(Inserting.this, "Android App Developer", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_contact_us:
-                Toast.makeText(Inserting.this, "You can reach at us by mail programmer2509@gmail.com",
+                Toast.makeText(Inserting.this, "You can reach at us by mail doston2509@gmail.com",
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_exit_app:

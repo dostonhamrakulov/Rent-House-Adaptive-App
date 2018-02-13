@@ -9,6 +9,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+/*
+ *   Created by Doston Hamrakulov
+ */
 public class Displaying extends AppCompatActivity {
 
     @Override
@@ -46,10 +49,10 @@ public class Displaying extends AppCompatActivity {
         }
         switch(id){
             case R.id.id_about_us:
-                Toast.makeText(Displaying.this, "We are a team from RTU", Toast.LENGTH_LONG).show();
+                Toast.makeText(Displaying.this, "Android App Developer", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_contact_us:
-                Toast.makeText(Displaying.this, "You can reach at us by mail programmer2509@gmail.com",
+                Toast.makeText(Displaying.this, "You can reach at us by mail doston2509@gmail.com",
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_exit_app:

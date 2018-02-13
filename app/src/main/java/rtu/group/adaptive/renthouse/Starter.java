@@ -13,7 +13,9 @@ import android.widget.Toast;
 
 public class Starter extends AppCompatActivity {
 
-
+/*
+ *   Created by Doston Hamrakulov
+ */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,10 +73,10 @@ public class Starter extends AppCompatActivity {
         }
         switch(id){
             case R.id.id_about_us:
-                Toast.makeText(Starter.this, "We are a team from RTU", Toast.LENGTH_LONG).show();
+                Toast.makeText(Starter.this, "Android App Developer", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_contact_us:
-                Toast.makeText(Starter.this, "You can reach at us by mail programmer2509@gmail.com",
+                Toast.makeText(Starter.this, "You can reach at us by mail doston2509@gmail.com",
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.id_exit_app:
