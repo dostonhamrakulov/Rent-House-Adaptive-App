@@ -77,16 +77,18 @@ public class Inserting extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Toast.makeText(Inserting.this, "Sorry, there is no any option for setting!!!", Toast.LENGTH_LONG).show();
+            universalBox("Sorry, there is no any option for setting!!!");
             return true;
         }
         switch(id){
             case R.id.id_about_us:
-                Toast.makeText(Inserting.this, "Android App Developer", Toast.LENGTH_LONG).show();
+                universalBox("This app has been developed for fun, not commercial purpose!\n\n" +
+                        "Developer: Doston\n" +
+                        "Email: doston2509@gmail.com");
                 return true;
             case R.id.id_contact_us:
-                Toast.makeText(Inserting.this, "You can reach at us by mail doston2509@gmail.com",
-                        Toast.LENGTH_LONG).show();
+                universalBox("Website: idoston.com\n" +
+                        "Email: doston2509@gmail.com");
                 return true;
             case R.id.id_exit_app:
                 Exit_alert();
@@ -95,6 +97,7 @@ public class Inserting extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void Exit_alert(){
         AlertDialog.Builder alert_builder = new AlertDialog.Builder(this);
         alert_builder.setMessage("Do you want to close this app?")
@@ -117,6 +120,19 @@ public class Inserting extends AppCompatActivity {
 
         AlertDialog alert = alert_builder.create();
         alert.setTitle("Alert!!!");
+        alert.show();
+    }
+
+    public void universalBox(String msg){
+        AlertDialog.Builder alert_builder = new AlertDialog.Builder(this);
+        alert_builder.setMessage(msg)
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+        AlertDialog alert = alert_builder.create();
         alert.show();
     }
 }

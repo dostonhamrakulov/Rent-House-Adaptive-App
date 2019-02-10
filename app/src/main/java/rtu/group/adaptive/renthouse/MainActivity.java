@@ -61,14 +61,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         switch(id){
-            case R.id.id_about_us:
-                Toast.makeText(MainActivity.this, "Android App Developer", Toast.LENGTH_LONG).show();
+            case R.id.id_about_using:
+                aboutMe();
                 return true;
-            case R.id.id_contact_us:
-                Toast.makeText(MainActivity.this, "You can reach at us by mail doston2509@gmail.com",
-                        Toast.LENGTH_LONG).show();
-                return true;
-            case R.id.id_exit_app:
+            case R.id.id_exit_app_home:
                 Exit_alert();
                 return true;
         }
@@ -97,6 +93,21 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog alert = alert_builder.create();
         alert.setTitle("Alert!!!");
+        alert.show();
+    }
+
+    public void aboutMe(){
+        AlertDialog.Builder alert_builder = new AlertDialog.Builder(this);
+        alert_builder.setMessage("This app has been developed for fun, not commercial purpose!\n\n" +
+                "Developer: Doston\n" +
+                "Email: doston2509@gmail.com")
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+        AlertDialog alert = alert_builder.create();
         alert.show();
     }
 }
